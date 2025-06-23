@@ -1,5 +1,6 @@
 package com.yal.wiki.conf;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -9,6 +10,7 @@ import org.springframework.core.env.Environment;
 
 @ComponentScan("com.yal.wiki")
 @SpringBootApplication
+@MapperScan("com.yal.wiki.mapper.*")
 public class WIkiApplication {
 
     /**
