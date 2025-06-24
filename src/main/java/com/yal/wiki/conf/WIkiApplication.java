@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 
 @ComponentScan("com.yal.wiki")
 @SpringBootApplication
-@MapperScan("com.yal.wiki.mapper.*")
+@MapperScan("com.yal.wiki.mapper")
 public class WIkiApplication {
 
     /**
