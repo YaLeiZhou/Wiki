@@ -7,6 +7,9 @@ properties和yml文件互转：https://www.toyaml.com/index.html
 
 MQSQL语句表名和列名应当使用反引号（`）来引用
 
-待办：
+待优化：
 1.日志优化
 2.启动时打印东西优化
+3.多配置文件配置
+4.配置文件中数据库密码加密
+
