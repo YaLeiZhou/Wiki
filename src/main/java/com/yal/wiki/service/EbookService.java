@@ -5,7 +5,7 @@ import com.yal.wiki.pojo.Ebook;
 import com.yal.wiki.pojo.EbookExample;
 import com.yal.wiki.req.EbookReq;
 import com.yal.wiki.resp.EbookResp;
-import org.springframework.beans.BeanUtils;
+import com.yal.wiki.utils.CopyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,13 +24,16 @@ public class EbookService {
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
         List<EbookResp> respList = new ArrayList<>();
         for (Ebook ebook : ebooksList) {
-            EbookResp ebookResp = new EbookResp();
-            //ebookResp.setName(ebook.getName());
-            BeanUtils.copyProperties(ebook,ebookResp);
-            ebookResp.setViewCount(50);
+//            EbookResp ebookResp = new EbookResp();
+//            //ebookResp.setName(ebook.getName());
+//            BeanUtils.copyProperties(ebook,ebookResp);
+//            ebookResp.setViewCount(50);
 
-            respList.add(ebookResp);
+            //CopyUtil.copy(ebook,EbookResp.class);
+
+//            respList.add(ebookResp);
         }
-        return respList;
+        List<EbookResp> ebookResps = CopyUtil.copyList(ebooksList, EbookResp.class);
+        return ebookResps;
     }
 }
