@@ -1,11 +1,11 @@
-GET http://localhost:8081/hello
+GET http://localhost:8082/hello
 
 ###
-POST http://localhost:8081/hello2
+POST http://localhost:8082/hello2
 Content-Type: application/x-www-form-urlencoded
 
 name=yal
 
 
 ###
-GET http://localhost:8081/test/list
+GET http://localhost:8082/test/list

@@ -5,7 +5,7 @@ import org.jasypt.util.text.BasicTextEncryptor;
 
 public final class JasyptEncryptorUtils {
 
-    private static final String salt = "test666";
+    private static final String salt = "EbfYkitulv73I2p0mXI50JMXoaxZTKJ7";
 
     private static BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
 

@@ -9,7 +9,16 @@ public class JasyptEncryptorUtilsTest {
         String testPwd = JasyptEncryptorUtils.encode("bwJP3@Puzn5pQBS");
         String devPwd = JasyptEncryptorUtils.encode("wikiDev132");
 
-        System.out.println("testPwd:    "+testPwd);
         System.out.println("devPwd:     "+devPwd);
+        System.out.println("testPwd:    "+testPwd);
+
+        String test = JasyptEncryptorUtils.decode(testPwd);
+        String dev= JasyptEncryptorUtils.decode(devPwd);
+
+        System.out.println("dev:     "+dev);
+        System.out.println("test:    "+test);
+
+
+
     }
 }
