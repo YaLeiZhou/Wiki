@@ -16,3 +16,19 @@ MQSQL语句表名和列名应当使用反引号（`）来引用
 6.热部署
 7.修改启动图案
 
+
+
+#前端
+npm get registry  --显示当前的镜像网址
+npm config set registry https://registry.npmmirror.com  -- 使用淘宝的镜像网址
+npm install -g @vue/cli@4.5.9
+vue --version
+vue create web
+
+cd web
+nup run serve
+
+
+
+
+
