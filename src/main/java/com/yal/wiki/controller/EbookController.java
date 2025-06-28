@@ -2,6 +2,7 @@ package com.yal.wiki.controller;
 
 
 import com.yal.wiki.pojo.Ebook;
+import com.yal.wiki.req.EbookReq;
 import com.yal.wiki.resp.CommonResp;
 import com.yal.wiki.service.EbookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,9 @@ public class EbookController {
     private EbookService ebookService;
 
     @GetMapping("/list")
-    public CommonResp list(){
+    public CommonResp list(EbookReq ebookReq){
         CommonResp<List<Ebook>> commonResp = new CommonResp<>();
-        List<Ebook> list = ebookService.list();
+        List<Ebook> list = ebookService.list(ebookReq);
         commonResp.setContent(list);
         return commonResp;
     }
