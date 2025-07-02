@@ -28,6 +28,8 @@ vue create web
 cd web
 nup run serve
 
+install ant-design-vue --save
+install ant-design-vue@2.0.0-rc.3 --save
 
 
 
