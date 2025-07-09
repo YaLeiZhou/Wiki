@@ -21,7 +21,7 @@ public class EbookService {
     public List<EbookResp> list(EbookReq ebookReq){
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
-        if(ObjectUtils.isEmpty(ebookReq.getName()))
+        if(!ObjectUtils.isEmpty(ebookReq.getName()))
         {
         criteria.andNameLike("%"+ebookReq.getName()+"%");
         }
