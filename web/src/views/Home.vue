@@ -82,19 +82,16 @@ for (let i = 0; i < 23; i++) {
 export default defineComponent({
   name: 'Home',
   setup(){
-    console.log("setup");
 
     const ebooks: any=ref();
     const ebooks1 = reactive({books: []});
 
     onMounted(()=>{
-      console.log("onMounted3");
       //初始化逻辑写到onMounted方法里，setup放一些自定义的参数
       axios.get("/ebook/list?name=Vue").then((response)=>{
             const data = response.data;
             ebooks.value= data.content;
             ebooks1.books=data.content;
-            console.log(response);
           }
       )
     });
