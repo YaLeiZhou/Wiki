@@ -35,6 +35,9 @@ install ant-design-vue@2.0.0-rc.3 --save
 
 npm install axios@0.21.0 --save  
 
+npm install @ant-design/icons-vue@5.1.8 --save  
+
+
 
 
 
