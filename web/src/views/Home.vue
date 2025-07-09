@@ -88,7 +88,7 @@ export default defineComponent({
 
     onMounted(()=>{
       //初始化逻辑写到onMounted方法里，setup放一些自定义的参数
-      axios.get("/ebook/list?name=Vue").then((response)=>{
+      axios.get("/ebook/list").then((response)=>{
             const data = response.data;
             ebooks.value= data.content;
             ebooks1.books=data.content;
